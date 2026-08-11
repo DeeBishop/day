@@ -92,9 +92,9 @@
   }
 
   function startGame() {
-    score = 0; timeLeft = 30;
+    score = 0; timeLeft = 50;
     scoreEl.textContent = '⭐ 0';
-    timeEl.textContent = '⏱ 30';
+    timeEl.textContent = '⏱ 50';
     startEl.classList.add('hidden');
     endEl.classList.add('hidden');
     hudEl.classList.remove('hidden');
@@ -120,7 +120,7 @@
   function shareScore() {
     const text = `Я набрал ${score} ⭐ в ТАПАЙ!\nПобей мой рекорд 👉 @your_bot`;
     if (tg && tg.openTelegramLink) {
-      tg.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent('https://t.me/your_bot')}&text=${encodeURIComponent(text)}`);
+      tg.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent('https://t.me/Gmfrosbot')}&text=${encodeURIComponent(text)}`);
     } else if (navigator.share) {
       navigator.share({ text });
     } else {
